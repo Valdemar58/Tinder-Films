@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".regInterestedIn">
+
+    <TextView
+        android:id="@+id/InterestedInBigText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/InterestedInScroll"
+        android:layout_marginTop="50sp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/reg_header_interested_in"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="34sp" />
+
+    <TextView
+        android:id="@+id/InterestedInWarning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/InterestedInBigText"
+        android:layout_alignStart="@id/InterestedInScroll"
+        android:layout_alignEnd="@id/InterestedInScroll"
+        android:paddingHorizontal="0sp"
+        android:text="@string/reg_warning_interested_in" />
+
+
+    <ScrollView
+        android:id="@+id/InterestedInScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ContinueButton"
+        android:layout_below="@id/InterestedInWarning"
+        android:layout_marginHorizontal="75sp"
+        android:layout_marginTop="5sp">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ToggleButton
+                android:id="@+id/InterestedInActionButton"
+                android:layout_margin="3sp"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:background="@drawable/custom_toggle_button"
+                android:textOn="@string/reg_interested_in_action"
+                android:textOff="@string/reg_interested_in_action"/>
+            <ToggleButton
+                android:id="@+id/InterestedInWesetrnButton"
+                android:layout_margin="3sp"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:background="@drawable/custom_toggle_button"
+                android:textOn="@string/reg_interested_in_western"
+                android:textOff="@string/reg_interested_in_western"/>
+            <ToggleButton
+                android:id="@+id/InterestedInNoirButton"
+                android:layout_margin="3sp"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:background="@drawable/custom_toggle_button"
+                android:textOn="@string/reg_interested_in_noir"
+                android:textOff="@string/reg_interested_in_noir"/>
+            <ToggleButton
+                android:id="@+id/InterestedInDetectiveButton"
+                android:layout_margin="3sp"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:background="@drawable/custom_toggle_button"
+                android:textOn="@string/reg_interested_in_detective"
+                android:textOff="@string/reg_interested_in_detective"/>
+        </GridLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/ContinueButton"
+        android:enabled="true"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="25sp"
+        android:layout_marginBottom="10sp"
+        android:text="@string/continue_btn" />
+
+</RelativeLayout>
